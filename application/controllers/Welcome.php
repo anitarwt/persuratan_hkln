@@ -31,4 +31,10 @@ class Welcome extends CI_Controller {
 	public function tampilan_disposisi(){
 		$this->load->view('tampilan_disposisi');
 	}
+	public function monitoring_surat(){
+		$this->load->view('monitoring_surat');
+	}
+	public function pencarian_surat(){
+		$this->load->view('pencarian_surat');
+	}
 }

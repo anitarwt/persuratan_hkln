@@ -20,16 +20,12 @@
   </head>
   <body>
     <div class="container-scroller">
-
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
           <a class="navbar-brand brand-logo" href="index.html"><img src="<?php echo base_url();?>/assets/images/logo_kementerian_agama.svg" alt="logo" />
          Biro Hukum dan Kerjasama Luar Negeri </a>
-
-
           <a class="navbar-brand brand-logo-mini" href="index.html"><img src="<?php echo base_url();?>/assets/assets/images/logo-mini.svg" alt="logo" /></a>
-
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -96,7 +92,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url();?>assets/pages/icons/mdi.html">
-                <span class="menu-title">Cetak Disposisi Surat</span>
+                <span class="menu-title">Disposisi Surat</span>
                 <i class="mdi mdi-contacts menu-icon"></i>
               </a>
             </li>
@@ -125,41 +121,39 @@
         </nav>
         <!-- partial -->
         <div class="main-panel">
-
+ <form class="form-inline">
           <div class="content-wrapper">
-              <style type="text/css">
-                background: #f3d7f9;
-              </style>
-            
-            <div class="page-header">
-              <h3 class="page-title">
-                <span class="page-title-icon bg-gradient-primary text-white mr-2">
-                  <i class="mdi mdi-home"></i>
-                </span> Dashboard </h3>
-              
-            </div>
-            <div>
-               <h2>Selamat Datang di Halaman Cetak Disposisi</h2>
-           
-            </div>
-           
-            <div class="row">
-              
-<div class="col-lg-16 grid-margin stretch-card">
+         <div class="input-group .col-lg-12">
+                        <div class="input-group-prepend">
+                          <div>Pencarian berdasarkan</div>
+                        </div>
+                        &nbsp;<input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+                         <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+                          <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+                        <button>Search</button>
+                      </div>
+
+
+</div>
+</form>
+
+
+            <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
-                   <div class="card-body">
-                  <table class="table table-bordered" width="100%">
+                  <div class="card-body">
+                    <h4 class="card-title">Tampilan Surat Masuk Biro Hukum dan Kerjasama Luar Negeri</h4>
+                   
+                    <table class="table table-bordered" width="100%">
                       <thead>
                         <tr>
                           <th> No </th>
-                          <th> Tanggal Disposisi </th>
-                          <th> Tanggal Surat </th>
-                          <th> Nomor Surat </th>
-                          <th> Pengirim </th>
-                          <th> Perihal Surat </th>
-                          <th> Disposisi Kepada </th>
-                          <th> Isi Disposisi </th>
-                          <th> Aksi </th>
+                          <th> Tanggal Terima </th>
+                          <th> No Surat </th>
+                          <th> Perihal </th>
+                          <th> Nama Pengirim </th>
+                          <th> Ringkasan Isi </th>
+                          <th> Status </th>
+                          <th>Aksi</th>
                           
                         </tr>
                        
@@ -169,64 +163,121 @@
                         <tr>
                           <td> 1 </td>
                           <td> 20-12-2019 </td>
-                          <td> 20-12-2019  </td>
-                          <td> 999/JK.2/KL.822H/2/12/2019</td>
+                          <td> 999/JK.2/KL.822H/2/12/2019 </td>
+                          <td> Undangan Narasumber </td>
                           <td> Kementerian Dalam Negeri </td>
                           <td> Undangan Narasumber Rapat</td>
-                          <td> Bagian IV </td>
-                          <td>Tindak Lanjut</td>
+                           <td>
+                              <label class="badge badge-gradient-warning">PROGRESS</label>
+                            </td> 
                          <td>
-                            <button type="button" class="btn btn-gradient-primary btn-sm">Cetak Disposisi <i class=" mdi mdi-printer btn-icon-append"></i></button>
+                        <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm"> Edit <i class="mdi mdi-file-check btn-icon-append"></i></button>
+                            <button type="button" class="btn btn-gradient-primary btn-sm">Detail <i class=" mdi mdi-view-grid btn-icon-append"></i></button>
                         </td>
                         </tr>
                         <tr>
-                          <td> 1 </td>
+                          <td> 2 </td>
                           <td> 20-12-2019 </td>
-                          <td> 20-12-2019  </td>
-                          <td> 999/JK.2/KL.822H/2/12/2019</td>
+                          <td> 999/JK.2/KL.822H/2/12/2019 </td>
+                          <td> Undangan Narasumber </td>
                           <td> Kementerian Dalam Negeri </td>
                           <td> Undangan Narasumber Rapat</td>
-                          <td> Bagian III </td>
-                           <td>Siapkan Jawaban</td>
+                           <td>
+                              <label class="badge badge-gradient-warning">PROGRESS</label>
+                            </td> 
                          <td>
-                            <button type="button" class="btn btn-gradient-primary btn-sm">Cetak Disposisi <i class=" mdi mdi-printer btn-icon-append"></i></button>
-                        </td>
-                        </tr>
-                        <tr>
-                          <td> 1 </td>
-                          <td> 20-12-2019 </td>
-                          <td> 20-12-2019  </td>
-                          <td> 999/JK.2/KL.822H/2/12/2019</td>
-                          <td> Kementerian Dalam Negeri </td>
-                          <td> Undangan Narasumber Rapat</td>
-                          <td> Bagian II </td>
-                           <td> Hadiri </td>
-                         <td>
-                            <button type="button" class="btn btn-gradient-primary btn-sm">Cetak Disposisi <i class=" mdi mdi-printer btn-icon-append"></i></button>
-                        </td>
-                        </tr>
-                        <tr>
-                          <td> 1 </td>
-                          <td> 20-12-2019 </td>
-                          <td> 20-12-2019  </td>
-                          <td> 999/JK.2/KL.822H/2/12/2019</td>
-                          <td> Kementerian Dalam Negeri </td>
-                          <td> Undangan Narasumber Rapat</td>
-                          <td> Sub Bagian Tata Usaha </td>
-                           <td>Arsip/Dokumen</td>
-                         <td>
-                            <button type="button" class="btn btn-gradient-primary btn-sm">Cetak Disposisi <i class=" mdi mdi-printer btn-icon-append"></i></button>
-                        </td>
-                        </tr>
                         
+                          <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm"> Edit <i class="mdi mdi-file-check btn-icon-append"></i></button>
+                            <button type="button" class="btn btn-gradient-primary btn-sm">Detail <i class=" mdi mdi-view-grid btn-icon-append"></i></button>
+                        </td>
+                        </tr>
+                         <tr>
+                          <td> 3 </td>
+                          <td> 20-12-2019 </td>
+                          <td> 999/JK.2/KL.822H/2/12/2019 </td>
+                          <td> Undangan Narasumber </td>
+                          <td> Kementerian Dalam Negeri </td>
+                          <td> Undangan Narasumber Rapat</td>
+                           <td>
+                              <label class="badge badge-gradient-warning">PROGRESS</label>
+                            </td> 
+                         <td>
+                        
+                         <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm"> Edit <i class="mdi mdi-file-check btn-icon-append"></i></button>
+                            <button type="button" class="btn btn-gradient-primary btn-sm">Detail <i class=" mdi mdi-view-grid btn-icon-append"></i></button>
+                        </td>
+                        </tr>
+                        <tr>
+                          <td> 4 </td>
+                          <td> 20-12-2019 </td>
+                          <td> 999/JK.2/KL.822H/2/12/2019 </td>
+                          <td> Undangan Narasumber </td>
+                          <td> Kementerian Dalam Negeri </td>
+                          <td> Undangan Narasumber Rapat</td>
+                           <td>
+                              <label class="badge badge-gradient-warning">PROGRESS</label>
+                            </td> 
+                         <td>
+                        
+                        <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm"> Edit <i class="mdi mdi-file-check btn-icon-append"></i></button>
+                            <button type="button" class="btn btn-gradient-primary btn-sm">Detail <i class=" mdi mdi-view-grid btn-icon-append"></i></button>
+                        </td>
+                        </tr>
+                         <tr>
+                          <td> 5 </td>
+                          <td> 20-12-2019 </td>
+                          <td> 999/JK.2/KL.822H/2/12/2019 </td>
+                          <td> Undangan Narasumber </td>
+                          <td> Kementerian Dalam Negeri </td>
+                          <td> Undangan Narasumber Rapat</td>
+                           <td>
+                              <label class="badge badge-gradient-warning">PROGRESS</label>
+                            </td> 
+                         <td>
+                        
+                         <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm"> Edit <i class="mdi mdi-file-check btn-icon-append"></i></button>
+                            <button type="button" class="btn btn-gradient-primary btn-sm">Detail <i class=" mdi mdi-view-grid btn-icon-append"></i></button>
+                        </td>
+                        </tr>
+                         <tr>
+                          <td> 6 </td>
+                          <td> 20-12-2019 </td>
+                          <td> 999/JK.2/KL.822H/2/12/2019 </td>
+                          <td> Undangan Narasumber </td>
+                          <td> Kementerian Dalam Negeri </td>
+                          <td> Undangan Narasumber Rapat</td>
+                           <td>
+                              <label class="badge badge-gradient-warning">PROGRESS</label>
+                            </td> 
+                         <td>
+                        
+                        <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm"> Edit <i class="mdi mdi-file-check btn-icon-append"></i></button>
+                            <button type="button" class="btn btn-gradient-primary btn-sm">Detail <i class=" mdi mdi-view-grid btn-icon-append"></i></button>
+                        </td>
+                        </tr>
+                        <tr>
+                          <td> 7 </td>
+                          <td> 20-12-2019 </td>
+                          <td> 999/JK.2/KL.822H/2/12/2019 </td>
+                          <td> Undangan Narasumber </td>
+                          <td> Kementerian Dalam Negeri </td>
+                          <td> Undangan Narasumber Rapat</td>
+                           <td>
+                              <label class="badge badge-gradient-warning">PROGRESS</label>
+                            </td> 
+                         <td>
+                        
+                        <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm"> Edit <i class="mdi mdi-file-check btn-icon-append"></i></button>
+                            <button type="button" class="btn btn-gradient-primary btn-sm">Detail <i class=" mdi mdi-view-grid btn-icon-append"></i></button>
+                        </td>
+                        </tr>
                       </tbody>
                     </table>
-                  </div>                                                                                                                                        
+                  </div>
                 </div>
               </div>
-             
-            </div>
-            
+           
+           
             
             
           </div>

@@ -28,6 +28,9 @@
           <a class="navbar-brand brand-logo-mini" href="index.html"><img src="<?php echo base_url();?>/assets/assets/images/logo-mini.svg" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
           
           
           <ul class="navbar-nav navbar-nav-right">
@@ -128,7 +131,7 @@
                    
                 
                     <h4 class="card-title">Monitoring Surat Masuk Biro Hukum dan Kerjasama Luar Negeri</h4>
-                   <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm"> Tambah Surat <i class="mdi mdi-file-check btn-icon-append"></i></button>
+                   
                     <table class="table table-bordered" width="100%">
                       <thead>
                         <tr>
@@ -143,6 +146,7 @@
                           <th> Disposisi Kepada </th>
                           <th> Posisi Surat </th>
                           <th> Aksi </th>
+                         
                           
                         </tr>
                        
@@ -156,112 +160,103 @@
                           <td> 999/JK.2/KL.822H/2/12/2019 </td>
                           <td> Undangan </td>
                            <td> Undangan Narasumber</td>
+                           <td>Undangan Narasumber Acara Kegiatan Workshop</td>
                           <td> Kementerian Dalam Negeri </td>
-                          <td> Undangan Narasumber Rapat</td>
-                           <td>
-                              <label class="badge badge-gradient-warning">PROGRESS</label>
-                            </td> 
+                          <td> Bagian IV</td>
+                          
                          <td>
-                        <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm"> Edit <i class="mdi mdi-file-check btn-icon-append"></i></button>
-                            <button type="button" class="btn btn-gradient-primary btn-sm">Detail <i class=" mdi mdi-view-grid btn-icon-append"></i></button>
+                      <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm">Detail Surat <i class="mdi mdi-file-check btn-icon-append"></i></button>
                         </td>
                         </tr>
                         <tr>
                           <td> 2 </td>
                           <td> 20-12-2019 </td>
+                          <td> 17-12-2019 </td>
                           <td> 999/JK.2/KL.822H/2/12/2019 </td>
-                          <td> Undangan Narasumber </td>
+                          <td> Undangan </td>
+                           <td> Undangan Narasumber</td>
+                            <td>Undangan Narasumber Acara Kegiatan Workshop</td>
                           <td> Kementerian Dalam Negeri </td>
-                          <td> Undangan Narasumber Rapat</td>
-                           <td>
-                              <label class="badge badge-gradient-warning">PROGRESS</label>
-                            </td> 
+                          <td> Bagian IV</td>
+                         
+                           
                          <td>
-                        
-                          <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm"> Edit <i class="mdi mdi-file-check btn-icon-append"></i></button>
-                            <button type="button" class="btn btn-gradient-primary btn-sm">Detail <i class=" mdi mdi-view-grid btn-icon-append"></i></button>
+                        <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm">Detail Surat <i class="mdi mdi-file-check btn-icon-append"></i></button>
                         </td>
                         </tr>
-                         <tr>
+                        <tr>
                           <td> 3 </td>
                           <td> 20-12-2019 </td>
+                          <td> 17-12-2019 </td>
                           <td> 999/JK.2/KL.822H/2/12/2019 </td>
-                          <td> Undangan Narasumber </td>
+                          <td> Undangan </td>
+                           <td> Undangan Narasumber</td>
+                            <td>Undangan Narasumber Acara Kegiatan Workshop</td>
                           <td> Kementerian Dalam Negeri </td>
-                          <td> Undangan Narasumber Rapat</td>
+                         <td> Bagian IV</td>
+                       
                            <td>
-                              <label class="badge badge-gradient-warning">PROGRESS</label>
+                               <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm">Detail Surat<i class="mdi mdi-file-check btn-icon-append"></i></button>
                             </td> 
                          <td>
                         
-                         <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm"> Edit <i class="mdi mdi-file-check btn-icon-append"></i></button>
-                            <button type="button" class="btn btn-gradient-primary btn-sm">Detail <i class=" mdi mdi-view-grid btn-icon-append"></i></button>
                         </td>
                         </tr>
                         <tr>
                           <td> 4 </td>
                           <td> 20-12-2019 </td>
+                          <td> 17-12-2019 </td>
                           <td> 999/JK.2/KL.822H/2/12/2019 </td>
-                          <td> Undangan Narasumber </td>
+                          <td> Undangan </td>
+                           <td> Undangan Narasumber</td>
+                            <td>Undangan Narasumber Acara Kegiatan Workshop</td>
                           <td> Kementerian Dalam Negeri </td>
-                          <td> Undangan Narasumber Rapat</td>
+                          <td> Bagian IV</td>
+                         
                            <td>
-                              <label class="badge badge-gradient-warning">PROGRESS</label>
+                               <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm">Detail Surat <i class="mdi mdi-file-check btn-icon-append"></i></button>
                             </td> 
                          <td>
-                        
-                        <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm"> Edit <i class="mdi mdi-file-check btn-icon-append"></i></button>
-                            <button type="button" class="btn btn-gradient-primary btn-sm">Detail <i class=" mdi mdi-view-grid btn-icon-append"></i></button>
+                       
                         </td>
                         </tr>
                          <tr>
                           <td> 5 </td>
                           <td> 20-12-2019 </td>
+                          <td> 17-12-2019 </td>
                           <td> 999/JK.2/KL.822H/2/12/2019 </td>
-                          <td> Undangan Narasumber </td>
+                          <td> Undangan </td>
+                           <td> Undangan Narasumber</td>
+                            <td>Undangan Narasumber Acara Kegiatan Workshop</td>
                           <td> Kementerian Dalam Negeri </td>
-                          <td> Undangan Narasumber Rapat</td>
+                          <td> Bagian IV</td>
+                      
                            <td>
-                              <label class="badge badge-gradient-warning">PROGRESS</label>
+                              <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm">Detail Surat <i class="mdi mdi-file-check btn-icon-append"></i></button>
                             </td> 
                          <td>
-                        
-                         <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm"> Edit <i class="mdi mdi-file-check btn-icon-append"></i></button>
-                            <button type="button" class="btn btn-gradient-primary btn-sm">Detail <i class=" mdi mdi-view-grid btn-icon-append"></i></button>
-                        </td>
-                        </tr>
-                         <tr>
-                          <td> 6 </td>
-                          <td> 20-12-2019 </td>
-                          <td> 999/JK.2/KL.822H/2/12/2019 </td>
-                          <td> Undangan Narasumber </td>
-                          <td> Kementerian Dalam Negeri </td>
-                          <td> Undangan Narasumber Rapat</td>
-                           <td>
-                              <label class="badge badge-gradient-warning">PROGRESS</label>
-                            </td> 
-                         <td>
-                        
-                        <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm"> Edit <i class="mdi mdi-file-check btn-icon-append"></i></button>
-                            <button type="button" class="btn btn-gradient-primary btn-sm">Detail <i class=" mdi mdi-view-grid btn-icon-append"></i></button>
+                      
                         </td>
                         </tr>
                         <tr>
-                          <td> 7 </td>
+                          <td> 6 </td>
                           <td> 20-12-2019 </td>
+                          <td> 17-12-2019 </td>
                           <td> 999/JK.2/KL.822H/2/12/2019 </td>
-                          <td> Undangan Narasumber </td>
+                          <td> Undangan </td>
+                           <td> Undangan Narasumber</td>
+                            <td>Undangan Narasumber Acara Kegiatan Workshop</td>
                           <td> Kementerian Dalam Negeri </td>
-                          <td> Undangan Narasumber Rapat</td>
+                          <td> Bagian IV</td>
+                      
                            <td>
-                              <label class="badge badge-gradient-warning">PROGRESS</label>
+                               <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm">Detail Surat <i class="mdi mdi-file-check btn-icon-append"></i></button>
                             </td> 
                          <td>
-                        
-                        <button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm"> Edit <i class="mdi mdi-file-check btn-icon-append"></i></button>
-                            <button type="button" class="btn btn-gradient-primary btn-sm">Detail <i class=" mdi mdi-view-grid btn-icon-append"></i></button>
+                     
                         </td>
                         </tr>
+                       
                       </tbody>
                     </table>
                   </div>

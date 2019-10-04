@@ -152,6 +152,7 @@
                           </div>
                         </div>
                       </div>
+                      
                       <div class="input-group row">
                           <label for="JenisSurat" class="col-sm-3 col-form-label">Jenis Surat</label>
                              <div class="col-sm-9">
@@ -161,8 +162,8 @@
                             <a class="dropdown-item" href="#">Surat Biasa</a>
                           </div>
                         </div>
-                      </div>
-
+                    
+                        </form>
                       <div class="form-group row">
                         <label for="exampleInputConfirmPassword2" class="col-sm-3 col-form-label">Nomor Surat</label>
                         <div class="col-sm-9">
