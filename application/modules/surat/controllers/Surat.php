@@ -13,4 +13,9 @@ class Surat extends Admin_Controller
 		$this->data['pageTitle'] = 'Input Surat';
 		$this->load->view('surat-input', $this->data);
 	}
+	public function cari_surat()
+	{
+		$this->data['pageTitle'] = 'Pencarian Surat';
+		$this->load->view('surat-cari', $this->data);
+	}
 }

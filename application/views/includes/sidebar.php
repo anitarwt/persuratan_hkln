@@ -28,14 +28,13 @@
 			</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url(); ?>assets/pages/charts/chartjs.html">
+			<a class="nav-link" href="<?php echo base_url('surat/monitoring') ?>">
 				<span class="menu-title">Monitoring Surat Masuk</span>
-				&nbsp;
 				<i class="mdi mdi-chart-bar menu-icon"></i>
 			</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url(); ?>assets/pages/tables/basic-table.html">
+			<a class="nav-link" href="<?php echo base_url('surat/cari_surat') ?>">
 				<span class="menu-title">Pencarian Surat Masuk</span>
 				<i class="mdi mdi-table-large menu-icon"></i>
 			</a>
