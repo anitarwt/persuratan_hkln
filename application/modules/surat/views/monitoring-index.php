@@ -41,8 +41,10 @@
 								<td> Bagian IV</td>
 								<td> Bagian IV</td>
 								<td>
-									<button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm">Detail Surat
+									<button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm"> Edit
 										<i class="mdi mdi-file-check btn-icon-append"></i></button>
+									<a href="<?php echo base_url('surat/detail_surat') ?>" class="btn btn-gradient-primary btn-sm">Detail
+										<i class=" mdi mdi-view-grid btn-icon-append"></i></a>
 								</td>
 							</tr>
 						<?php endfor; ?>

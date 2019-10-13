@@ -26,6 +26,8 @@
 <!-- endinject -->
 <!-- Custom js for this page -->
 <script src="<?php echo base_url(); ?>/assets/js/dashboard.js"></script>
+<link rel="stylesheet" href="<?php echo base_url();?>/assets/vendors/datepicker/css/bootstrap-datepicker3.min.css">
+<script src="<?php echo base_url(); ?>/assets/vendors/datepicker/js/bootstrap-datepicker.min.js"></script>
 <!-- End custom js for this page -->
 </body>
 </html>

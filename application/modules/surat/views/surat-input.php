@@ -18,7 +18,7 @@
 					<div class="form-group row">
 						<label for="exampleInputEmail2" class="col-sm-3 col-form-label">Tanggal Surat</label>
 						<div class="col-sm-9">
-							<input type="email" class="form-control" id="exampleInputEmail2" placeholder="tanggal surat">
+							<input type="email" class="form-control datepicker" id="exampleInputEmail2" placeholder="tanggal surat">
 						</div>
 					</div>
 					<div class="form-group row">
@@ -91,3 +91,12 @@
 	</div>
 </div>
 <?php $this->load->view('includes/footer') ?>
+<script>
+    (function ($) {
+        'use strict';
+        $(function () {
+            $('.datepicker').datepicker({
+            });
+        });
+    })(jQuery);
+</script>

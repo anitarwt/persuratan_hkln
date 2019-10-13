@@ -13,4 +13,15 @@ class Login extends CI_Controller
 		return $this->load->view('auth/login');
 	}
 
+	public function check_user()
+	{
+		$params = $this->input->post();
+		if (in_array($params['username'], array('usertu', 'userkabag', 'userkasubag', 'userstaff', 'userkaro'))) {
+			$this->session->set_userdata($params);
+			redirect('dashboard');
+		} else {
+			redirect('login');
+		}
+	}
+
 }

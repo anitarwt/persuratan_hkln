@@ -9,7 +9,7 @@
 		<div class="card">
 			<div class="card-body">
 				<div class="row">
-					<div class="col-3">
+					<div class="col-2">
 						<div class="form-group">
 							<label>Pencarian berdasarkan</label>
 							<select id="jenisSurat" name="jenisSurat" class="form-control">
@@ -21,20 +21,26 @@
 					</div>
 					<div class="col-3">
 						<div class="form-group">
+							<label>Pencarian berdasarkan</label>
+							<input type="text" class="form-control" name="search" placeholder="Cari">
+						</div>
+					</div>
+					<div class="col-2">
+						<div class="form-group">
 							<label>Tanggal Surat</label>
 							<div class="input-group">
-								<input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="01.10.2019">
+								<input type="text" class="form-control datepicker" id="inlineFormInputGroupUsername2" placeholder="01.10.2019">
 								<div class="input-group-append">
 									<button class="btn btn-sm btn-gradient-primary"><i class="mdi mdi-calendar"></i></button>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-3">
+					<div class="col-2">
 						<div class="form-group">
 							<label>Tanggal Surat Masuk</label>
 							<div class="input-group">
-								<input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="01.10.2019">
+								<input type="text" class="form-control datepicker" id="inlineFormInputGroupUsername2" placeholder="01.10.2019">
 								<div class="input-group-append">
 									<button class="btn btn-sm btn-gradient-primary"><i class="mdi mdi-calendar"></i></button>
 								</div>
@@ -77,8 +83,6 @@
 									<label class="badge badge-gradient-warning">PROGRESS</label>
 								</td>
 								<td>
-									<button type="button" class="btn btn-gradient-primary btn-icon-text btn-sm"> Edit
-										<i class="mdi mdi-file-check btn-icon-append"></i></button>
 									<button type="button" class="btn btn-gradient-primary btn-sm">Detail
 										<i class=" mdi mdi-view-grid btn-icon-append"></i></button>
 								</td>
@@ -102,6 +106,8 @@
                 columnNum: 2,
                 columnBorderWidth: 2,
                 shadow: true
+            });
+            $('.datepicker').datepicker({
             });
         });
     })(jQuery);
