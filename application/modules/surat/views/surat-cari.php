@@ -12,26 +12,27 @@
 					<div class="col-2">
 						<div class="form-group">
 							<label>Pencarian berdasarkan</label>
-							<select id="jenisSurat" name="jenisSurat" class="form-control">
-								<option>Perihal</option>
-								<option>Nomor Surat</option>
-								<option>Jenis Surat</option>
+							<select id="berdasarkan" name="berdasarkan" class="form-control">
+								<option value="1">Perihal</option>
+								<option value="2">Nomor Surat</option>
+								<option value="3">Jenis Surat</option>
 							</select>
 						</div>
 					</div>
 					<div class="col-3">
 						<div class="form-group">
 							<label>Pencarian berdasarkan</label>
-							<input type="text" class="form-control" name="search" placeholder="Cari">
+							<input type="text" class="form-control" name="search_by" id="search_by" placeholder="Cari">
 						</div>
 					</div>
 					<div class="col-2">
 						<div class="form-group">
 							<label>Tanggal Surat</label>
 							<div class="input-group">
-								<input type="text" class="form-control datepicker" id="inlineFormInputGroupUsername2" placeholder="01.10.2019">
+								<input type="text" class="form-control datepicker" id="tanggal_surat" placeholder="01.10.2019">
 								<div class="input-group-append">
-									<button class="btn btn-sm btn-gradient-primary"><i class="mdi mdi-calendar"></i></button>
+									<button class="btn btn-sm btn-gradient-primary"><i class="mdi mdi-calendar"></i>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -40,57 +41,36 @@
 						<div class="form-group">
 							<label>Tanggal Surat Masuk</label>
 							<div class="input-group">
-								<input type="text" class="form-control datepicker" id="inlineFormInputGroupUsername2" placeholder="01.10.2019">
+								<input type="text" class="form-control datepicker" id="tanggal_terima" placeholder="01.10.2019">
 								<div class="input-group-append">
-									<button class="btn btn-sm btn-gradient-primary"><i class="mdi mdi-calendar"></i></button>
+									<button class="btn btn-sm btn-gradient-primary"><i class="mdi mdi-calendar"></i>
+									</button>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-3">
 						<div class="form-group">
-							<button class="btn btn-block btn-primary mt-4">Search</button>
+							<button class="btn btn-block btn-primary mt-4" id="searchBtn">Search</button>
 						</div>
 					</div>
 				</div>
-				<div id="table-pencarian">
-					<table class="table table-bordered">
-						<thead>
-						<tr>
-							<th> No</th>
-							<th> No Surat</th>
-							<th> Tanggal Terima</th>
-							<th> Perihal</th>
-							<th> Nama Pengirim</th>
-							<th> Ringkasan Isi</th>
-							<th> Status</th>
-							<th>Aksi</th>
-
-						</tr>
-
-
-						</thead>
-						<tbody>
-						<?php for($i=1; $i<10; $i++): ?>
-							<tr>
-								<td> <?php echo $i ?></td>
-								<td> 999/JK.2/KL.822H/2/12/2019</td>
-								<td> 20-12-2019</td>
-								<td> Undangan Narasumber</td>
-								<td> Kementerian Dalam Negeri</td>
-								<td> Undangan Narasumber Rapat</td>
-								<td>
-									<label class="badge badge-gradient-warning">PROGRESS</label>
-								</td>
-								<td>
-									<button type="button" class="btn btn-gradient-primary btn-sm">Detail
-										<i class=" mdi mdi-view-grid btn-icon-append"></i></button>
-								</td>
-							</tr>
-						<?php endfor; ?>
-						</tbody>
-					</table>
+				<div class="row">
+					<div class="col-3">
+						<div class="form-group">
+							<label>Pencarian barcode</label>
+							<input type="text" class="form-control" name="barcode" id="barcode" placeholder="Cari barcode">
+						</div>
+					</div>
+					<div class="col-2">
+						<div class="form-group">
+							<button class="btn btn-block btn-primary mt-4" id="searchBtn">Scan</button>
+						</div>
+					</div>
 				</div>
+				<?php
+				$this->datatables->generate('table_surat_masuk');
+				?>
 			</div>
 		</div>
 	</div>
@@ -101,6 +81,8 @@
     (function ($) {
         'use strict';
         $(function () {
+            var erTable_table_surat_masuk;
+
             $("#table-pencarian").freezeTable({
                 fixedNavbar: '.navbar',
                 columnNum: 2,
@@ -108,7 +90,41 @@
                 shadow: true
             });
             $('.datepicker').datepicker({
+                format: 'dd.mm.yyyy'
             });
+
+            $(document).on('click', '#searchBtn', function () {
+                erTable_table_surat_masuk.ajax.reload(null, false);
+                $('#barcode').focus();
+                $('#barcode').select();
+            });
+
+            $('#barcode').focus();
+
+            function createDatatable() {
+                erTable_table_surat_masuk = $("#table_surat_masuk").DataTable({
+                    processing: true,
+                    serverSide: true,
+                    searchDelay: 500,
+                    autoWidth: false,
+
+                    ajax: {
+                        url: baseURL + "surat/cari_surat",
+                        type: "POST",
+                        data: function (d, dt) {
+                            d.dt_name = "table_surat_masuk";
+                            d.berdasarkan = $('#berdasarkan').val();
+                            d.search_by = $('#search_by').val();
+                            d.tanggal_surat = $('#tanggal_surat').val();
+                            d.tanggal_terima = $('#tanggal_terima').val();
+                            d.barcode = $('#barcode').val();
+                        }
+                    }
+                });
+            };
+
+            createDatatable();
+
         });
     })(jQuery);
 </script>

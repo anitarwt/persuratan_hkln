@@ -258,6 +258,66 @@ class Surat extends Admin_Controller
 	public function cari_surat()
 	{
 		$this->data['pageTitle'] = 'Pencarian Surat';
+
+		$params = $this->input->post();
+
+		$datatable = $this->datatables->init();
+		$datatable->select('*');
+		$datatable->from('ph_surat_masuk');
+
+		if (isset($params['barcode']) && !empty($params['barcode'])) {
+			$datatable->where('barcode', $params['barcode']);
+		}
+		if (isset($params['tanggal_surat']) && !empty($params['tanggal_surat'])) {
+			$datatable->where('tanggal_surat', $params['tanggal_surat']);
+		}
+		if (isset($params['tanggal_terima']) && !empty($params['tanggal_terima'])) {
+			$datatable->where('tanggal_terima', $params['tanggal_terima']);
+		}
+		if (isset($params['search_by']) && !empty($params['search_by'])) {
+			switch ($params['berdasarkan']){
+				case 1:
+					$datatable->like('perihal', $params['search_by']);
+					break;
+				case 2:
+					$datatable->like('nomor_surat', $params['search_by']);
+					break;
+				case 3:
+					$datatable->like('jenis_surat', $params['search_by']);
+					break;
+			}
+		}
+
+		$datatable
+			->style(array(
+				'class' => 'table table-striped table-bordered',
+			))
+			->column('Tanggal Surat', 'tanggal_surat', function ($data, $row) {
+				return date_create($data)->format('d-m-Y');
+			})
+			->column('Tanggal Terima', 'tanggal_terima', function ($data, $row) {
+				return date_create($data)->format('d-m-Y');
+			})
+			->column('Nomor Surat', 'nomor_surat')
+			->column('Perihal', 'perihal')
+			->column('Jenis Surat', 'jenis_surat')
+			->column('Kode', 'barcode')
+			->column('Status', 'tindak_lanjut', function ($data, $row) {
+				if ($row['tindak_lanjut']) {
+					return '<label class="badge badge-gradient-success">SELESAI</label>';
+				} else {
+					return '<label class="badge badge-gradient-warning">DALAM PROSES</label>';
+				}
+			})
+			->column('Action', 'id_surat', function ($data, $row) {
+				$detail = '<a class="btn btn-xs btn-info detail" data-id="' . $data . '" href="javascript:void(0)"><i class="mdi mdi-magnify"></i></a>';
+				return '<div class="btn-group">'
+					. $detail
+					. '</div>';
+			});
+
+		$this->datatables->create('table_surat_masuk', $datatable);
+
 		$this->load->view('surat-cari', $this->data);
 	}
 }

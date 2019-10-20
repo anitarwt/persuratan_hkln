@@ -68,6 +68,18 @@ class DatatablesBuilder
 		return $this->_db;
 	}
 
+	public function where($field, $value)
+	{
+		$this->_db->where($field, $value);
+		return $this->_db;
+	}
+
+	public function like($field, $value)
+	{
+		$this->_db->like($field, $value);
+		return $this->_db;
+	}
+
 	public function style($data)
 	{
 		foreach ($data as $option => $value) {
