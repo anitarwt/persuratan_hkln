@@ -12,7 +12,7 @@
 		<div class="card">
 			<div class="card-body">
 				<h4 class="card-title">Rekapitulasi Surat Masuk</h4>
-				<h3 class="text-small">Jumat, 27 Sept 2019</h3>
+				<h3 class="text-small"><?php echo date_create()->format('d F Y') ?></h3>
 				<canvas id="traffic-chart"></canvas>
 				<div id="traffic-chart-legend" class="rounded-legend legend-vertical legend-bottom-left pt-4"></div>
 			</div>
